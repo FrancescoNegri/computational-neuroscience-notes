@@ -64,7 +64,7 @@ introduced.
 \paragraph{The Transmembrane Resistance}
 The membrane displays voltage-independent channels with proteins allowing the leakage of ions
 both into and out of the cell, iducing a current \(I_{leak}\). A leakage reversal potential
-\(E_{m}\sim{E_{rest}}\) can thus be introduces. Then, the membrane voltage changes in a linear way,
+\(E_{m}\sim{E_{rest}}\) can thus be introduced. Then, the membrane voltage changes in a linear way,
 following the Ohm's law:
 \begin{equation*}
     V_{m}=R_{m}\cdot{I_{leak}}
@@ -108,7 +108,7 @@ By solving the KCL, an expression for the membrane voltage as a function of time
 \end{equation*}
 \subsection{Modelling the Single Channel}
 So far, voltage-independent channels have been taken into account. However, cell membranes
-contains a number of individual (voltage-dependent) channels. These channels open in a stochastic
+contain a number of individual (voltage-dependent) channels. These channels open in a stochastic
 way and their opening may be affected by several factors, such as the membrane potential \(V_{m}\),
 intracellular ion concentration, and so on. Moreover, they are selective for one or more ions,
 typically Na\({}^{+}\), K\({}^{+}\), Ca\({}^{2+}\), and Cl\({}^{-}\).
@@ -138,7 +138,7 @@ previously introduced equivalent circuit:
 \end{equation*}
 Note that \(g_{syn}\) and \(E_{syn}\) are the synaptic conductance and the synaptic reversal
 potential respectively.
-\paragraph{Why are ionic channels modeled as resistive circuits?} The flux of ions through each
+\paragraph{Why are ionic channels modelled as resistive circuits?} The flux of ions through each
 transmembrane ionic channel is ruled by both \textit{drift} and \textit{diffusion}. As a
 consequence, they give birth to a drift-diffusion (ionic) current \(I_{k}\).
 \begin{align*}
@@ -162,8 +162,8 @@ Let's now integrate all the terms:
     -\frac{RT}{z_{k}F}\int_{[k]_{in}}^{[k]_{out}}{\frac{1}{[k](x)}d[k](x)}
     -\int_{V_{in}}^{V_{out}}{dV(x)}
 \end{equation*}
-where \(\Delta{x}\) is the membranes thickness. At this point let's assume current density which
-is constant across the membrane, such that it can be taken outside the integral.
+where \(\Delta{x}\) is the membrane thickness. At this point, let's assume the current density
+to be constant across the membrane, such that it can be taken outside the integral.
 \begin{equation*}
     I_{k}\int_{0}^{\Delta{x}}{\frac{1}{\mu_{k}z_{k}F[k]}}dx=
     -\frac{RT}{z_{k}F}\ln{\frac{[k]_{out}}{[k]_{in}}}
@@ -178,4 +178,4 @@ This is the Ohm's law and this relationship has been derived without any assumpt
 of ionic channels or about their opening and closing dynamics.\\
 Eventually, a crucial remark consists in saying that the electrophysiological properties of a
 neuron are not exclusively caused by peculiar kinds of channels across its membrane. Also the
-neuron morphology plays a fundamental role, thus it has to be modeled too.
+neuron morphology plays a fundamental role, thus it has to be modelled too.

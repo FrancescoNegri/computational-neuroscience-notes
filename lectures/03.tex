@@ -11,16 +11,16 @@ neurons, allowing scientists to share them across the scientific community.
 \subsection{Compartmental Models}
 Generally, the morphology of the dendritic arborizations is the main attribute used to classify
 neurons. Compartmental models are based on the idea that the various structures found in
-a neuron can be modelled separaterly, then they are put together, constituting the
+a neuron can be modelled separately, then they are put together, constituting the
 overall realistic and working model of the target cell.\\
 In order to compartmentalize a neuron, the structure is divided into three main parts:
 \begin{itemize}
     \item \textbf{Soma}: it is commonly approximated to a isopotential spheroid. the
           transition points between the soma and the dendritic tree are difficult to determine.
-    \item \textbf{Dendritic Tree}: it is often modeled as a complex structure made by
+    \item \textbf{Dendritic Tree}: it is often modelled as a complex structure made by
           linked sequences of discrete cylinders, characterized by geometrical properties.
     \item  \textbf{Dendritic Spines}: they are the major target of synapses, making their
-          modeling rather complex.
+          modelling rather complex.
 \end{itemize}
 During the development of a model, it is crucial to keep in mind the following relatonships:
 \begin{equation*}
@@ -45,7 +45,7 @@ An example of compartmental model is reported below, in particular the KCL and K
 \end{equation*}
 In the equations above, \(r_{j}\) denotes the (specific) axoplasmatic resistance and \(I_{ion,j}\)
 the ionic currents, including leakage and active channels, as well as synaptic contributions.
-The main questions that should be answered when building a compartmental model regards the
+The main questions that should be answered when building a compartmental model regard the
 compartmentalization criterion to employ, the estimation of the dendrites diameter if it is
 not constant, and whether and how to take into account the dendritic spines. Therefore,
 a segmentation (or compartmentalization) method is required.
@@ -56,7 +56,7 @@ a segmentation (or compartmentalization) method is required.
 After characterizing the neuron from a geometrical point of view, a cable model, where
 each dendritic segments is approximated to a cable with a specific diameter, is constructed.
 Note that a threshold on the diameter is usually exploited, in order to have a discrete
-set of diameters. Finally, each cable segment is considered to be isopotential and is modeled
+set of diameters. Finally, each cable segment is considered to be isopotential and is modelled
 through an equivalent electrical circuit.
 
 \subsection{Complexity Reduction}
@@ -81,11 +81,11 @@ preserve it during model reduction.
     \centering
 \end{figure}
 \paragraph{The Rall's Equivalent Cylinder}
-The main idea is that each branching dendrite can be represented as a single cylinder
+The main idea is that the whole dendritic tree of a neuron can be represented as a single cylinder
 having a constant diameter. In the model proposed by Rall, the soma is substituted by
 a compact region (a single compartment), while the entire dendritic tree is replaced by
 a single equivalent cylindrical cable. Said so, it is crucial to properly select the
-geometrical an electrical properties of such a cylinder, such as its radius \(a\) and
+geometrical and electrical properties of such a cylinder, such as its radius \(a\) and
 length \(L\).
 \begin{figure}[H]
     \includegraphics[scale=0.35]{03_5}
@@ -107,7 +107,7 @@ model neuron input resistance \(R_{in}\) can be derived as follow:
     \includegraphics[scale=0.2]{03_6}
     \centering
 \end{figure}
-The Rall's model is based on three criteria which are particularly difficult to meet:
+The Rall's model can be used with neurons matching three particularly strict criteria:
 \begin{enumerate}
     \item The electrotonic lengths of all paths from soma to dendritic ends must be identical.
           \begin{equation*}
@@ -135,10 +135,10 @@ is to be introduced.
 This model was introduced to overcome the limitations of the Rall's cylinder, as a matter of
 facts the idea is once again to model the whole dendritic tree as a single cable, but
 the diameter is no longer assumed constant: it changes as a function of distance. This allows
-a modeling much more precise in terms of electrical quantities, since they are strictly
+a modelling much more precise in terms of electrical quantities, since they are strictly
 related to the radius of the equivalent cable. A parameter \(\Delta{x}\) regulates the degree
 of detail of the model, in particular it represents the length of a segment with constant
-diameter of the overall cable. A very small \(\Delta_{x}\) generates an extremely precise model,
+diameter of the overall cable. A very small \(\Delta{x}\) generates an extremely precise model,
 but the computational cost increases as a consequence of the greater number of compartments.
 \begin{figure}[H]
     \includegraphics[scale=0.35]{03_8}
@@ -169,6 +169,8 @@ about the signal propagation.
     \ln{\biggl(\frac{V(x_{1})}{V(x_{3})}\biggr)}=
     \ln{\biggl(\frac{V(x_{1})}{V(x_{2})}\biggr)}+\ln{\biggl(\frac{V(x_{2})}{V(x_{3})}\biggr)}
 \end{equation*}
+Note that a similar approach considering signal propagation delay instead of signal
+attenuation also exists.
 \paragraph{The Pinsky-Rinzel 2-Comp Model}
 This model is based on the fact that at least two compartments are required to properly mimic
 complex patterns of electrophysiological activity. In particular, a compartment models the soma,
@@ -184,7 +186,7 @@ them, which instead regulates the kind of electrophysiological activity.
     \centering
 \end{figure}
 
-\subsection{Modeling Dendritic Spines and Synaptic Inputs}
+\subsection{Modelling Dendritic Spines and Synaptic Inputs}
 Spines should definitely be taken into account when building the model of a neuron, they
 characterize the surface of dendrites, moreover spines usually contain synapses.
 \begin{figure}[H]
@@ -193,7 +195,7 @@ characterize the surface of dendrites, moreover spines usually contain synapses.
 \end{figure}
 Note that several shapes are available when talking about spines, with different
 geometrical properties and, as a consequence, different electrical properties.\\
-When modeling spines, two distinct cases should be taken into account:
+When modelling spines, two distinct cases should be taken into account:
 \begin{itemize}
     \item \textbf{Sipnes as \textit{passive} components}: the current flows \textit{from}
           the dendrite \textit{into} the spines.\\
@@ -220,7 +222,7 @@ When modeling spines, two distinct cases should be taken into account:
           \end{equation*}
     \item \textbf{Sipnes as \textit{active} components}: the current is generated at the head membrane.\\
           In this case the spine contains a synapse, as an input current flows into it. The synaptic input
-          can be modeled through a time-varying synaptic conductance.
+          can be modelled through a time-varying synaptic conductance.
           \begin{figure}[H]
               \includegraphics[scale=0.4]{03_15}
               \centering

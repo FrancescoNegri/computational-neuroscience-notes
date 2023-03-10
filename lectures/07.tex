@@ -8,7 +8,7 @@ open and closed states.
 
 \subsection{Multistate Channels}
 It has been shown that the transmembrane ionic channels present complex molecules involving
-several states and transitions: there are not only open and closed ones states, but also a
+several states and transitions: there are not only open and closed states, but also a
 lot of intermediate situations.\\
 If the number of gates is \(k=3\), it means that there are \(2^{k}=2^{3}=8\) different states,
 among which only one represents the full open configuration, allowing the ions to flow
@@ -45,24 +45,24 @@ equation
 where \(P(S_{i},t)\) is the probability of being in state \(S_{i}\) at time \(t\) and
 \(P(S_{i}\rightarrow{S_{j}})\) is the probability to have a transition from state \(S_{i}\)
 to state \(S_{j}\). Note that, generally speaking, transitions are reversible.\\
-If a large number of idential channels is considered, the probability of being in a state \(S_{i}\) can
+If a large number of identical channels is considered, the probability of being in a state \(S_{i}\) can
 be reinterpreted as the fraction of channels occupying the \(S_{i}\) state, denoted by \(s_{i}\), while
-the transition probability \(P(S_{i}\rightarrow{S_{j}}\) becomes the rate constant of the reaction, \(r_{ij}\).
+the transition probability \(P(S_{i}\rightarrow{S_{j}})\) becomes the rate constant of the reaction, \(r_{ij}\).
 As a consequence, the previous equation can be rewritten in these terms:
 \begin{equation*}
     \frac{ds_{i}}{dt}=\sum_{j=1}^{n}s_{j}r_{ji}-\sum_{i=1}^{n}s_{i}r_{ij}
 \end{equation*}
-Said so, the HH model should be modified accordingly to the stochastic processes described above:
+Said so, the HH model should be modified according to the stochastic processes described above:
 \begin{gather*}
     C_{m}\frac{dV}{dt}
     =\bar{g}_{Na}\cdot{m^{3}h}\cdot{(V_{m}-E_{Na})}
     +\bar{g}_{K}\cdot{n^{4}}\cdot{(V_{m}-E_{K})}
-    +\bar{g}_{leak}\cdot{(V_{m}-E_{leak})}\\
+    +g_{leak}\cdot{(V_{m}-E_{leak})}\\
     \Downarrow\\
     C_{m}\frac{dV}{dt}
     =\bar{g}_{Na}\cdot{m}\cdot{(V_{m}-E_{Na})}
     +\bar{g}_{K}\cdot{n}\cdot{(V_{m}-E_{K})}
-    +\bar{g}_{leak}\cdot{(V_{m}-E_{leak})}
+    +g_{leak}\cdot{(V_{m}-E_{leak})}
 \end{gather*}
 where \(m\) and \(n\) are stochastic processes of time and represent the fraction of open channels
 selective to Na\({}^{+}\) and K\({}^{+}\) ions respectively.\\
@@ -73,7 +73,7 @@ respectively, it can be stated that:
     n=\frac{1}{N_{K,max}}\sum_{i=1}^{N_{K,max}}\xi_{K,i}
 \end{gather*}
 Note that the binary activations reported here are to be derived by the binary activation variables,
-identifies, described, and modeled through patch-clamp measurements of single channels.\\
+identifies, described, and modelled through patch-clamp measurements of single channels.\\
 An example of a model for potassium channels is shown here, note how the channel has to go through all
 the intermediate states in order to reach the open configuration.
 \begin{figure}[H]
@@ -96,8 +96,8 @@ a sort of refractory period, as it is not able to open again and allow the passa
 By employing these stochastic models, the behaviour of a single channel is very far from the one
 observed through the Hodgkin-Huxley model; nonetheless, by increasing the number of considered
 channels the dynamics tend to be coincident with the HH model one. Therefore, it can be said
-that stochastic models tends to be equivalent to the HH model as long as a large population of
-neurons is observed.
+that stochastic models tends to be equivalent to the HH model as long as a large number of
+channels is observed.
 \begin{figure}[H]
     \includegraphics[scale=0.3]{07_4}
     \centering
@@ -111,8 +111,8 @@ inactivation processes dependending on \(m\) from those depending on \(V_{m}\).
     \includegraphics[scale=0.45]{07_5}
     \centering
 \end{figure}
-Also in the plots above it can be observed that increasing the number of observed channels leads to
-obtain a model similar to the HH one. This is true also in the case of current stimulations, as depicted below.
+Also in the plots above it can be seen that increasing the number of observed channels leads to
+a model similar to the HH one. This is true also in the case of current stimulations, as depicted below.
 \begin{figure}[H]
     \includegraphics[scale=0.45]{07_6}
     \centering

@@ -6,7 +6,7 @@ components. In other words, neurons are assumed to work exclusively as passive c
 therefore only resistances and capacitances are considered.\\
 The following quantities represents the electrical components involved in the Cable Theory.
 \begin{figure}[H]
-    \includegraphics[scale=0.28]{04_1}
+    \includegraphics[scale=0.18]{04_1}
     \centering
 \end{figure}
 Note that given these measures, the relatonships reported here hold:
@@ -20,7 +20,7 @@ Note that given these measures, the relatonships reported here hold:
     \hspace{2.5cm}
     \tau_{m}=r_{m}c_{m}=R_{M}C_{M}=R_{m}C_{m}
 \end{gather*}
-The cable is modeled as depicted below and the subsequent canonical expression for
+The cable is modelled as depicted below and the subsequent canonical expression for
 the cable equation is derived.
 \begin{figure}[H]
     \includegraphics[scale=0.26]{04_2}
@@ -151,7 +151,7 @@ with \(\lambda=\sqrt{\frac{r_{m}}{r_{i}}}\) being the space constant.
 \begin{itemize}
     \item \textbf{Space constant \(\lambda\)}: it depends not only on the axoplasmatic
           and membrane resistances (\(r_{i}\) and \(r_{m}\) respectively), but on the cable
-          diameter as well, as illustrated by this relatonship:
+          diameter as well, as illustrated by this relationship:
           \begin{equation*}
               \lambda=\sqrt{\frac{r_{m}}{r_{i}}}=\sqrt{\frac{R_{m}}{R_{i}}\frac{d}{4}}
           \end{equation*}
@@ -224,8 +224,9 @@ with a rate controlled by the space constant \(\lambda\).\\
 \textit{General Solution:} \(V(X)=A_{1}e^{X}+A_{2}e^{-X}\)\\
 \textit{Computations:}
 \begin{gather*}
-    V(X)\xrightarrow[X\to{\infty}]{0}
-    \Rightarrow{0=A_{1}\cancelto{1}{e^{X}}+\cancelto{0}{A_{2}e^{-X}}}
+    V(X)\xrightarrow{X\to{\infty}}{0}
+    \Rightarrow{0=A_{1}e^{X}+\cancelto{0}{A_{2}e^{-X}}}
+    \Rightarrow{A_{1}e^{\infty}=0}
     \Rightarrow{A_{1}=0}\\
     V(X)\mid{}_{X=0}=V_{0}
     \Rightarrow{V_{0}=\cancel{A_{1}}+A_{2}}
@@ -294,11 +295,11 @@ the open end case, where \(V_{L}=0\).\\
     \Rightarrow{C_{1}=V_{L}}\\
     V(0)=V_{0}
     \Rightarrow{V_{0}=C_{1}\cosh{(L)}+C_{2}\sinh{(L)}}
-    \Rightarrow{\text{CHIEDERE E CORREGGERE!!!}}
+    \Rightarrow{C_{2}=\frac{V_{L}}{\tanh{(L)}}}
 \end{gather*}
 \textit{Steady-State Solution:}
 \begin{equation*}
-    \text{CHIEDERE E CORREGGERE!!!}
+    V(X)=V_{L}\cosh{(L-X)}+\frac{V_{L}}{\tanh{(L)}}\sinh{(L-X)}
 \end{equation*}
 All the presented steady-state solutions are presented in the plot below, showing
 how the voltage drops as a function of distance.
@@ -309,7 +310,7 @@ how the voltage drops as a function of distance.
 Finally, there are also two other cases of finite cable that should be taken into
 account:
 \begin{itemize}
-    \item \textbf{Finit Cable with Leaky End}: the boundary conditions are defined
+    \item \textbf{Finite Cable with Leaky End}: the boundary conditions are defined
     by the same expression
     \begin{equation*}
         \pm{\frac{1}{r_{i}}\frac{\partial{V}}{\partial{x}}}\mid{}_{x=0,L}=G_{L}\cdot{V(x,t)}
@@ -373,7 +374,7 @@ by a neuron.
 \subsubsection{Passive Dendrites}
 \paragraph{Passive Filters} They may act as linear filters acting on the input signal: this
 kind of filtering tends to attenuate the dendritic signal as a function of the travelled
-distance and its frequency. As a consequence, is a signal is too low in power or very
+distance and its frequency. As a consequence, if a signal is too low in power or very
 far away it tends to be disregarded.
 \paragraph{Non-linear Interactions} Whenever excitatory and inhibitory inputs are
 widely separated from one another on different dendritic branches, the input signals
@@ -382,7 +383,7 @@ If the inputs are adjacent to each other the inhibition can produce a highly non
 shunting of the excitatory input (a logic AND-NOT).\\
 Moreover, the branch points in the dendritic tree sums up the currents in individual
 branches.
-\paragraph{Reducing and Amplifying the Mutual Interactiion} Generally, excitatory
+\paragraph{Reducing and Amplifying the Mutual Interaction} Generally, excitatory
 inputs to the same branch tend to sum sublinearly, whereas inputs on different branches
 sum linearly.
 \paragraph{Coincidence Detection} The back-propagation of action potentials triggers
